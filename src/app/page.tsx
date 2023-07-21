@@ -13,7 +13,7 @@ export default function Home() {
   const [select, setSelect] = useState<Pokemon | undefined>(undefined);
 
 
-  const { data, isLoading, hasNextPage, fetchNextPage, fetchPreviousPage, isFetchingNextPage } =
+  const { data, hasNextPage, fetchNextPage } =
     useInfiniteQuery<Pokemons>(['pokemons'], fetchPokemons, {
       getNextPageParam: (lastPage) => lastPage.next,
     });

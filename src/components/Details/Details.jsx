@@ -4,14 +4,6 @@ import { typeColors } from "../../utils/helpers";
 import "./Details.css";
 
 const Details = ({ data }) => {
-  const statsContent = [
-    { title: "HP", field: "hp" },
-    { title: "Attack", field: "attack" },
-    { title: "Defense", field: "defense" },
-    { title: "Special Attack", field: "specialAttack" },
-    { title: "Special Defense", field: "specialDefense" },
-    { title: "Speed", field: "speed" },
-  ];
 
   const getTypeColor = (type) => {
     return typeColors[type] || 'light';
@@ -42,8 +34,8 @@ const Details = ({ data }) => {
             alt=""
             height={80}
           />
-          <span className="text-lg font-semibold capitalize text-center block">{data.id}</span>
-          <span className="text-lg font-semibold capitalize text-center block">{data.name}</span>
+          <span role="id" className="text-lg font-semibold capitalize text-center block">{data.id}</span>
+          <span role="name" className="text-lg font-semibold capitalize text-center block">{data.name}</span>
           <div className="flex flex-col w-fullv p-5">
             <span className="font-semibold">Types</span>
             <div className="flex">

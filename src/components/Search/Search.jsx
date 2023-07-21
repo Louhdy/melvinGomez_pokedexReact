@@ -40,7 +40,7 @@ const Search = ({ fetchSearch }) => {
             className="search-field rounded-lg p-4 text-base block ml-auto mr-auto w-full"
             type="search"
             value={search}
-            placeholder="Search Pokémon"
+            placeholder="Buscar Pokemon"
             onKeyDown={handleKeyDown}
             onChange={(e) => searched(e)}
         ></input>
